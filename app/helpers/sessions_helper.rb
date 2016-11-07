@@ -19,4 +19,9 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  def user_Actual
+    @useractual = User.find_by_id(session[:user_id])
+    @useractual = @useractual.id
+  end
+
 end

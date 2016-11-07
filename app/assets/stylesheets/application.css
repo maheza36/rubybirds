@@ -22,3 +22,14 @@
    margin: 0px;
    padding: 0px;
  }
+.visible-chirp{
+  display: none;
+}
+
+.create{
+  margin-bottom: 10px;
+}
+
+textarea{
+  resize:none;
+}

@@ -1,5 +1,23 @@
 <h1 class="text-center" > WELCOME TO RAILS, BIRDS </h1>
 <div class="container">
+  <% if logged_in? %>
+    <%= form_for(:chirp, url:chirps_path) do |f| %>
+      <div class="form-group">
+        <!--<label for="user_body"></label>
+        <input type="text" name="user[body]" id="body" class="form-control">
+      -->
+      <%= f.label :Tuit %>
+      <%= f.text_area :body, class: 'form-control', cols:40, rows:5 %>
+      </div>
+      <div class="form-group visible-chirp">
+        <%= f.label :Usuario %>
+        <%= f.text_field :user_id, class: 'form-control' , value: user_Actual %>
+      </div>
+      <%= f.submit "Create", class: "btn btn-primary create center-block", style: "margin-top:20px;" %>
+    <% end %>
+  <% end %>
+</div>
+<div class="container">
 <section class="chirps">
   <% @chirps.each do |ch| %>
     <article class="chirp">

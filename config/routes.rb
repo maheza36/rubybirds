@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get "sessions/new" => "sessions#new"
   post "sessions/create" => "sessions#create"
   delete "sessions/delete" => "sessions#delete"
+  resource :chirps
 
 end
